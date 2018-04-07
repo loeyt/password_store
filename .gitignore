@@ -1,0 +1,17 @@
+/bin/
+/tmp/
+
+/.env
+
+
+# removed some generated things
+#**/*.log
+#**/*.sqlite
+#.idea/
+#node_modules/
+#.sass-cache/
+#*-packr.go
+#public/assets/
+#password_store
+#.vscode/
+#.grifter/
