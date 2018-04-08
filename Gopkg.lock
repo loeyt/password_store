@@ -149,7 +149,10 @@
 [[projects]]
   branch = "master"
   name = "github.com/gobuffalo/x"
-  packages = ["httpx"]
+  packages = [
+    "httpx",
+    "sessions"
+  ]
   revision = "11ca13c05abd73167c56ed10f8874c7c7497f759"
 
 [[projects]]
@@ -478,6 +481,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "9b184ecddd44f91eb235cdb56030962fca6f1b4c9c416809fdb57bd0f6299f16"
+  inputs-digest = "2bc1758bed5e09f188c3d33ea471ecdc4497c1c51c519e57c7fc0e134e98ac7b"
   solver-name = "gps-cdcl"
   solver-version = 1

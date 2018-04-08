@@ -7,6 +7,7 @@ import (
 	"github.com/gobuffalo/buffalo/middleware"
 	"github.com/gobuffalo/buffalo/middleware/ssl"
 	"github.com/gobuffalo/envy"
+	"github.com/gobuffalo/x/sessions"
 	"github.com/unrolled/secure"
 )
 
@@ -29,6 +30,7 @@ func App() *buffalo.App {
 			PreWares: []buffalo.PreWare{
 				stripSlash,
 			},
+			SessionStore: sessions.Null{},
 		})
 
 		// Automatically redirect to SSL
