@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io"
 	"net/http"
 	"os"
@@ -167,7 +166,6 @@ func (v *SecretsResource) Load() error {
 	if err != nil {
 		errors.Wrap(err, "unable to encrypt index")
 	}
-	fmt.Printf("contents: %q\n", buf.Bytes())
 	v.Lock()
 	defer v.Unlock()
 	v.index = buf.String()
