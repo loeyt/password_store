@@ -160,11 +160,11 @@ func (v *SecretsResource) Load() error {
 	cmd.Stdout = buf
 	err = cmd.Run()
 	if err != nil {
-		errors.Wrap(err, "unable to run gpg command to encrypt index")
+		return errors.Wrap(err, "unable to run gpg command to encrypt index")
 	}
 	err = cmd.Wait()
 	if err != nil {
-		errors.Wrap(err, "unable to encrypt index")
+		return errors.Wrap(err, "unable to encrypt index")
 	}
 	v.Lock()
 	defer v.Unlock()

@@ -12,6 +12,7 @@ RUN buffalo build --static -o /bin/app
 FROM alpine
 RUN apk add --no-cache bash
 RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache gnupg
 
 WORKDIR /bin/
 
